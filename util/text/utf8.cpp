@@ -357,7 +357,7 @@ const char *u8_memchr(const char *s, uint32_t ch, size_t sz, int *charn)
   int csz;
 
   *charn = 0;
-  while (i < sz) {
+  while ((size_t)i < sz) {
     c = csz = 0;
     do {
       c <<= 6;
